@@ -1,0 +1,8 @@
+
+{% block content %}
+    <h1>New enquiry</h1>
+    <form method="POST" action={% url 'create' %} class="post-form">{% csrf_token %}
+        {{ new_enq.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+{% endblock %}

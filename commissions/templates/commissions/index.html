@@ -1,0 +1,9 @@
+{% if commission_list %}
+  <ul>
+    {% for commission in commission_list %}
+      <li>< a href="{% url 'show' commission.id %}">{{ commission.title }}</a></li>
+    {% endfor %}
+  </ul>
+{% else %}
+   No commissions could be found
+{% endif %}
